@@ -44,12 +44,14 @@ var app = {
 			.appendTo(app.ui.$title);
 		
 		// Find the phone model on this page (important for model specific features)
-		app.phone.model = $('b:contains("Model number")')
+		// Note: the "Model number" label is English-only, so on localized phone UIs
+		// (e.g. German) this won't match - fall back to null instead of throwing.
+		var $modelCell = $('b:contains("Model number")')
 							.parent()
 							.siblings('td:last-child')
-							.find('b')
-							.text()
-							.match(/\d\d\d\d/)[0] * 1;
+							.find('b');
+		var modelMatch = $modelCell.text().match(/\d\d\d\d/);
+		app.phone.model = modelMatch ? modelMatch[0] * 1 : null;
 	},
 
 	launch: function() {
