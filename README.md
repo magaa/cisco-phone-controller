@@ -9,24 +9,19 @@ Chrome extension, which embeds a Remote Phone Control App on the Phone's Web Pag
 
 # Installation
 
-First get the extension files: on GitHub click **Code → Download ZIP** and unzip it, or clone the repository:
-
-```
-git clone https://github.com/magaa/cisco-phone-controller.git
-```
-
-The extension itself is the `src` folder (it contains `manifest.json`).
+1. Download **[cisco-phone-controller.zip](https://github.com/magaa/cisco-phone-controller/releases/download/v2.0-beta/cisco-phone-controller.zip)** (all versions: [Releases](https://github.com/magaa/cisco-phone-controller/releases))
+2. Unzip it to a permanent location, e.g. your Documents folder. You get a folder `cisco-phone-controller` that contains `manifest.json`.
 
 ## Chrome (and other Chromium browsers like Edge, Brave)
 1. Open `chrome://extensions` (Edge: `edge://extensions`)
 2. Turn on **Developer mode** (toggle in the top right; in Edge on the left)
 3. Click **Load unpacked**
-4. Select the `src` folder
+4. Select the unzipped `cisco-phone-controller` folder
 5. "Cisco Phone Controller" now appears in the list. It stays installed after restarting the browser.
 
-To update: replace the files in the `src` folder and click the reload icon on the extension's card.
+To update: download the new ZIP, replace the files in the folder and click the reload icon on the extension's card.
 
-Note: do not move or delete the `src` folder afterwards, Chrome loads the extension directly from it.
+Note: do not move or delete the folder afterwards, Chrome loads the extension directly from it.
 
 # Using the Extension
 1. Navigate to the phone's web page in your browser
