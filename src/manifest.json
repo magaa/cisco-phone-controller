@@ -16,13 +16,6 @@
       "matches": ["*://*/CGI/*", "*://*/Device_Information.html"],
       "js": ["jquery-3.7.1.min.js", "cisco-phone-controller.js"]
     }
-  ],
-
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "cisco-phone-controller@magaa.github.io",
-      "strict_min_version": "109.0"
-    }
-  }
+  ]
 
 }
