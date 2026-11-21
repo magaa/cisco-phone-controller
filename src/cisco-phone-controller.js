@@ -15,10 +15,15 @@ var app = {
 		// Try to find our entry point on the page, if this is a Cisco Phone page
 		// which we support, and in a locale we support.  We're just looking
 		// for the large page header in white to put "Control Me" next to it
-		app.ui.$title = $('font:contains("Device Information")')
-			.add('font:contains("Cisco IP Phone")')
-			.add('font:contains("Cisco Unified IP Phone")')
-			
+		// The English header is preferred; localized pages fall back to the
+		// language-independent product name. Take only the first match so a page
+		// showing both headers still gets exactly one launcher.
+		var $title = $('font:contains("Device Information")');
+		if ($title.length === 0) {
+			$title = $('font:contains("Cisco IP Phone"), font:contains("Cisco Unified IP Phone")');
+		}
+		app.ui.$title = $title.first();
+
 		// Found it?
 		if (app.ui.$title.length !== 1) {
 			// Nope

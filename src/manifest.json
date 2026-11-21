@@ -3,6 +3,7 @@
   "manifest_version": 3,
   "name": "Cisco Phone Controller",
   "version": "2.0",
+  "version_name": "2.0 Beta",
 
   "description": "Embeds a Remote Phone Control App on the Phone's internal Web Page",
 
