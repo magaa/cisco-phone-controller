@@ -3,9 +3,16 @@ Chrome extension, which embeds a Remote Phone Control App on the Phone's Web Pag
 
 > **Version 2.0 Beta** – migrated to Manifest V3 and works on localized phone web pages (e.g. German), not only English ones. It is not published in the browser stores; install it locally as described below.
 
-# Required Setup
-1. You will need either a Cisco Unified Communications Manager (CUCM) End User or Application User
-2. Associate one or more phones to the user under Controlled Devices (No groups/roles to assign!)
+# Required Setup (CUCM)
+The extension needs a CUCM user that controls the phone. No roles or access control groups are required.
+
+1. **Create the user** – either
+   - Application User: *User Management → Application User → Add New*, set User ID and password, or
+   - End User: use an existing one (*User Management → End User*).
+2. **Assign phones** – in the user's *Device Information* section move the phone(s) from *Available Devices* to *Controlled Devices*, then *Save*.
+3. **Enable web access** on each phone – *Device → Phone → (phone) → Product Specific Configuration Layout → Web Access: Enabled*, *Save* and *Apply Config*.
+
+Log in with this user's ID and password when you click "Control Me".
 
 # Installation
 
